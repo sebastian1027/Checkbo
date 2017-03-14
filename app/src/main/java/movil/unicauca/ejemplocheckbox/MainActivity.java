@@ -23,6 +23,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         CBRed = (CheckBox) findViewById(R.id.CBRed);
         CBGreen = (CheckBox) findViewById(R.id.CBGreen);
         CBBlue = (CheckBox) findViewById(R.id.CBBlue);
+        imprimircolor = (ImageView) findViewById(R.id.imprimircolor);
+
 
         //Eventos
         CBRed.setOnClickListener(this);
@@ -33,24 +35,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        //if ((CBRed.isChecked()) && (CBGreen= false) && (CBBlue= false)) imprimircolor.setBackgroundColor(Color.BLACK);
-        //else {
+            imprimircolor.setBackgroundColor(Color.BLACK);
             if (CBRed.isChecked()) imprimircolor.setBackgroundColor(Color.RED);
-                else imprimircolor.setBackgroundColor(Color.BLACK);
+            else imprimircolor.setBackgroundColor(Color.BLACK);
             if (CBGreen.isChecked()) imprimircolor.setBackgroundColor(Color.GREEN);
-                else imprimircolor.setBackgroundColor(Color.BLACK);
-            if (CBBlue.isChecked()) imprimircolor.setBackgroundColor(Color.GREEN);
-                else imprimircolor.setBackgroundColor(Color.GREEN);
+            if (CBBlue.isChecked()) imprimircolor.setBackgroundColor(Color.BLUE);
             if ((CBRed.isChecked()) && (CBBlue.isChecked())) imprimircolor.setBackgroundColor(Color.MAGENTA);
-                else imprimircolor.setBackgroundColor(Color.BLACK);
             if ((CBRed.isChecked()) && (CBGreen.isChecked())) imprimircolor.setBackgroundColor(Color.YELLOW);
-                else imprimircolor.setBackgroundColor(Color.BLACK);
             if ((CBGreen.isChecked()) && (CBBlue.isChecked())) imprimircolor.setBackgroundColor(Color.CYAN);
-                else imprimircolor.setBackgroundColor(Color.BLACK);
             if ((CBRed.isChecked()) && (CBGreen.isChecked()) && (CBBlue.isChecked())) imprimircolor.setBackgroundColor(Color.WHITE);
-                else imprimircolor.setBackgroundColor(Color.BLACK);
-        //}
 
     }
+
+
 
 }
